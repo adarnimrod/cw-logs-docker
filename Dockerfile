@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir --progress-bar=off \
 COPY --chown=root:root config /etc/aws/
 COPY --chown=root:root entrypoint /usr/local/bin/
 COPY --chown=root:root awslogs.conf /var/awslogs/etc/awslogs.conf.j2
-COPY --chown=root:root deduce-aws-region /usr/local/bin/
+COPY --chown=root:root deduce_aws_region /usr/local/bin/
 USER nobody
 ENV AWS_CONFIG_FILE="/etc/aws/config" \
     LOG_GROUP_NAME="" \

@@ -1,5 +1,5 @@
 *
 !awslogs.conf
 !config
-!deduce-aws-region
+!deduce_aws_region
 !entrypoint

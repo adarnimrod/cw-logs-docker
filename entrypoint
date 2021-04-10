@@ -3,7 +3,7 @@ set -eux
 template /var/awslogs/etc/awslogs.conf.j2 > /tmp/config
 if [ -z "${AWS_DEFAULT_REGION:-}" ]
 then
-    AWS_DEFAULT_REGION="$(deduce-aws-region)"
+    AWS_DEFAULT_REGION="$(deduce_aws_region)"
     export AWS_DEFAULT_REGION
 fi
 eval exec "$@"

@@ -45,8 +45,6 @@ repos:
     rev: v0.3.0
     hooks:
       - id: hadolint
-      - id: docker-compose
-
 
   - repo: https://github.com/ambv/black
     rev: 20.8b1

@@ -4,7 +4,7 @@ from urllib.request import urlopen
 import json
 
 if __name__ == "__main__":
-    response = urlopen(
+    response = urlopen(  # nosec
         "http://169.254.169.254/latest/dynamic/instance-identity/document"
     )
     print(json.loads(response.read().decode("utf-8"))["region"])
