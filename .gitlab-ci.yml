@@ -2,24 +2,3 @@
 include:
   - project: shore/ci-templates
     file: templates/pre-commit.yml
-  - project: shore/ci-templates
-    file: templates/docker.yml
-
-stages:
-  - test
-  - build
-  - deploy
-
-build:
-  extends: .docker-build-shore
-  tags: [ns4.shore.co.il]
-
-push-shore:
-  extends: .docker-push
-  tags: [ns4.shore.co.il]
-
-push-hub:
-  extends: .docker-push
-  tags: [ns4.shore.co.il]
-  variables:
-    DOCKER_REGISTRY: registry.hub.docker.com/adarnimrod
