@@ -17,11 +17,9 @@ build:
 push-shore:
   extends: .docker-push
   tags: [ns4.shore.co.il]
-  variables:
-    FULL_IMAGE: "registry.shore.co.il/$IMAGE:$TAG"
 
 push-hub:
   extends: .docker-push
   tags: [ns4.shore.co.il]
   variables:
-    FULL_IMAGE: "registry.hub.docker.com/$IMAGE:$TAG"
+    DOCKER_REGISTRY: registry.hub.docker.com/adarnimrod
