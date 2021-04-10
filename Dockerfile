@@ -1,4 +1,4 @@
-FROM python:3.7-alpine3.10
+FROM python:3.9-alpine3.13
 # hadolint ignore=DL3013
 RUN pip install --no-cache-dir --progress-bar=off \
         awscli-cwlogs \
